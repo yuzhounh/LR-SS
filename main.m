@@ -40,7 +40,7 @@ figure_7_accuracy_on_simulated_datasets;
 
 %% Experiment 3
 % Test on real-world datasets using Bayesian optimization
-classify_real_world_datasets;
+classify_time_series;
 classify_images;
 
 % Plot results and output Table 9

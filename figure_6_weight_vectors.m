@@ -83,6 +83,7 @@ end
 fprintf('----------------------------------------\n\n');
 
 % Create a figure with 7x1 subplots
+close all; 
 figure('Position', [100, 100, 800, 1200]);  % Adjust figure size for better visibility
 
 % Define colors

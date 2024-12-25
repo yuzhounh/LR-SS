@@ -159,6 +159,7 @@ for i = 1:length(methods)
 end
 
 % Save results to .mat file
+remkdir('results');
 save(sprintf('results/results_%s_rep%d.mat', dataset, repetition), 'methods', 'best_accuracies', ...
     'best_precisions', 'best_recalls', 'best_f1_scores', 'best_aucs', ...
     'best_parameters', 'best_weights', 'val_accuracies', 'all_predictions');

@@ -1,3 +1,6 @@
+close all; 
+
+% load results
 load('accuracy_with_grid_search_2.mat', 'accuracies_SS1', 'accuracies_SS2', ...
      'delta_range', 'epsilon_range');
 

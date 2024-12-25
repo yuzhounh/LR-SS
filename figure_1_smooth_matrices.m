@@ -23,27 +23,6 @@ marg_w = [0.1 0.17]; % [left, right] margin
 % Create the tight subplot layout
 [ha, pos] = tight_subplot(Nh, Nw, gap, marg_h, marg_w);
 
-% Encapsulate matrix generation logic into a function
-function Q = generateMatrix(type, d, epsilon, delta)
-    distance = squareform(pdist([1:d]'));
-    
-    switch type
-        case 'eye'
-            Q = eye(d);
-        case 'Q1'
-            A = exp(-distance.^2/delta^2/2).*(0 < distance & distance <= epsilon);
-            D = diag(sum(A, 2));  % Use sum instead of ones(1,d)*A
-            Q = D - A;
-        case 'graphnet'
-            A = ones(d,d).*(0 < distance & distance == 1);
-            D = diag(sum(A, 2));
-            Q = D - A;
-        case 'Q2'
-            A = exp(-distance.^2/delta^2/2).*(0 < distance & distance <= epsilon);
-            Q = inv(A);
-    end
-end
-
 % Main loop optimization
 matrices = {
     struct('type', 'eye',      'delta', 0,   'title', '(a) Identity Matrix'),
@@ -65,6 +44,27 @@ for i = 1:6
     fprintf('Matrix %s:\n', matrices{i}.title);
     disp(Q);
     fprintf('\n');
+end
+
+% Encapsulate matrix generation logic into a function
+function Q = generateMatrix(type, d, epsilon, delta)
+    distance = squareform(pdist([1:d]'));
+    
+    switch type
+        case 'eye'
+            Q = eye(d);
+        case 'Q1'
+            A = exp(-distance.^2/delta^2/2).*(0 < distance & distance <= epsilon);
+            D = diag(sum(A, 2));  % Use sum instead of ones(1,d)*A
+            Q = D - A;
+        case 'graphnet'
+            A = ones(d,d).*(0 < distance & distance == 1);
+            D = diag(sum(A, 2));
+            Q = D - A;
+        case 'Q2'
+            A = exp(-distance.^2/delta^2/2).*(0 < distance & distance <= epsilon);
+            Q = inv(A);
+    end
 end
 
 % export figure

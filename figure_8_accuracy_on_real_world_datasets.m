@@ -1,5 +1,5 @@
 % Process and output classification results
-clear, clc;
+clear, clc, close all;
 
 % Define datasets and methods
 datasets = {'DistalPhalanxOutlineCorrect','GunPoint', 'FashionMNIST', 'MNIST'};
