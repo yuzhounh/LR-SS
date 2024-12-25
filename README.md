@@ -46,6 +46,8 @@ By adjusting the parameters, LR-SS can degenerate into the following algorithms:
    - Perform grid search for optimal parameters on simulated data
    - Perform Bayesian optimization on both simulated and real datasets
   
+![Weight vectors learned by different algorithms](weight_vectors.svg)
+  
 ## Contact
 
 For questions and feedback, please contact: **Jing Wang** (wangjing@xynu.edu.cn). 
