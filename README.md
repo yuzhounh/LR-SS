@@ -10,7 +10,7 @@ This work focuses on solving the optimization problem for logistic regression wi
 
 $$\max_{\mathbf{w}}\ln P(\mathbf{y}|\mathbf{X},\mathbf{w})-\lambda_1\|\mathbf{w}\|_1-\frac{\lambda_2}{2}\mathbf{w}^T\mathbf{Q}\mathbf{w}$$
 
-where $\mathbf{w}^T \mathbf{Q} \mathbf{w}$ is the smooth regularization, $\lambda_1$ and $\lambda_2$ are non-negative regularization parameters controlling the strength of the Laplacian and smooth priors, respectively. 
+where $\mathbf{w}^T \mathbf{Q} \mathbf{w}$ is the smooth regularization, $\lambda_1$ and $\lambda_2$ are non-negative regularization parameters controlling the strength of the Laplacian and smooth priors, respectively.
 
 ## Special Cases
 
@@ -38,6 +38,35 @@ By adjusting the parameters, LR-SS can degenerate into the following algorithms:
    - [FashionMNIST](https://github.com/zalandoresearch/fashion-mnist)
    - [MNIST](https://yann.lecun.com/exdb/mnist/)
 2. Place and extract the downloaded datasets in the `data` folder
+```
+data/
+├── DistalPhalanxOutlineCorrect/
+│   ├── DistalPhalanxOutlineCorrect.txt
+│   ├── DistalPhalanxOutlineCorrect_TEST.arff
+│   ├── DistalPhalanxOutlineCorrect_TEST.ts
+│   ├── DistalPhalanxOutlineCorrect_TEST.txt
+│   ├── DistalPhalanxOutlineCorrect_TRAIN.arff
+│   ├── DistalPhalanxOutlineCorrect_TRAIN.ts
+│   └── DistalPhalanxOutlineCorrect_TRAIN.txt
+├── FashionMNIST/
+│   ├── t10k-images-idx3-ubyte
+│   ├── t10k-labels-idx1-ubyte
+│   ├── train-images-idx3-ubyte
+│   └── train-labels-idx1-ubyte
+├── GunPoint/
+│   ├── GunPoint.txt
+│   ├── GunPoint_TEST.arff
+│   ├── GunPoint_TEST.ts
+│   ├── GunPoint_TEST.txt
+│   ├── GunPoint_TRAIN.arff
+│   ├── GunPoint_TRAIN.ts
+│   └── GunPoint_TRAIN.txt
+└── MNIST/
+    ├── t10k-images.idx3-ubyte
+    ├── t10k-labels.idx1-ubyte
+    ├── train-images.idx3-ubyte
+    └── train-labels.idx1-ubyte
+```
 3. Download the code from this repository
 4. Run `main.m` in MATLAB to:
    - Compare smoothing matrices
@@ -46,7 +75,7 @@ By adjusting the parameters, LR-SS can degenerate into the following algorithms:
    - Perform grid search for optimal parameters on simulated data
    - Visualize weight vectors learned by different algorithms
    - Perform Bayesian optimization on both simulated and real datasets
-  
+
 ![Weight vectors learned by different algorithms](weight_vectors.svg)
   
 ## Contact
