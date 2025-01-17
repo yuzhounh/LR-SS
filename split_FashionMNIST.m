@@ -1,3 +1,5 @@
+fprintf('Resplitting FashionMNIST...\n');
+
 % Define dataset name as a variable
 data_path = 'data/FashionMNIST';  % data/MNIST, data/FashionMNIST
 
@@ -36,3 +38,4 @@ fprintf('Class distribution in training set: %.2f%% class 1\n', ...
     100 * sum(train_labels) / length(train_labels));
 fprintf('Class distribution in test set: %.2f%% class 1\n', ...
     100 * sum(test_labels) / length(test_labels));
+fprintf('\n'); 

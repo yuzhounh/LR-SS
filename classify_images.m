@@ -1,5 +1,7 @@
-% Signal Classification Script for Multiple Datasets
-clear, clc;
+% Image Classification Script for Multiple Datasets
+% clear, clc;
+
+fprintf('Classifying image datasets using Bayesian optimization...\n');
 
 % List of datasets to process
 datasets = {

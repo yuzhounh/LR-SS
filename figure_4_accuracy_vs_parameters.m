@@ -3,7 +3,7 @@ load('data/SIN_2/data.mat');
 load('accuracy_with_grid_search.mat');
 
 % Create figure with adjusted size
-close all; 
+% close all; 
 fig = figure;
 pos = get(gcf,'Position');
 scale = 0.78;

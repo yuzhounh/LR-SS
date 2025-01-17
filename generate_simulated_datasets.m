@@ -1,6 +1,6 @@
 % 2022-3-11 18:18:20
 
-clear,clc,close all;
+% clear,clc,close all;
 
 % Change signal-to-noise ratios
 sRatio = 2.^(0:3);  % 4 different ratios: 1, 2, 4, 8

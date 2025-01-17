@@ -36,7 +36,7 @@ By adjusting the parameters, LR-SS can degenerate into the following algorithms:
    - [DistalPhalanxOutlineCorrect](https://www.timeseriesclassification.com/description.php?Dataset=DistalPhalanxOutlineCorrect)
    - [GunPoint](https://timeseriesclassification.com/description.php?Dataset=GunPoint)  
    - [FashionMNIST](https://github.com/zalandoresearch/fashion-mnist)
-   - [MNIST](https://yann.lecun.com/exdb/mnist/)
+   - [MNIST](https://yann.lecun.com/exdb/mnist/) or [MNIST Alternative](https://github.com/cvdfoundation/mnist)
 2. Place and extract the downloaded datasets in the `data` folder
 ```
 data/
@@ -49,10 +49,10 @@ data/
 │   ├── DistalPhalanxOutlineCorrect_TRAIN.ts
 │   └── DistalPhalanxOutlineCorrect_TRAIN.txt
 ├── FashionMNIST/
-│   ├── t10k-images-idx3-ubyte
-│   ├── t10k-labels-idx1-ubyte
-│   ├── train-images-idx3-ubyte
-│   └── train-labels-idx1-ubyte
+│   ├── t10k-images-idx3-ubyte.gz
+│   ├── t10k-labels-idx1-ubyte.gz
+│   ├── train-images-idx3-ubyte.gz
+│   └── train-labels-idx1-ubyte.gz
 ├── GunPoint/
 │   ├── GunPoint.txt
 │   ├── GunPoint_TEST.arff
@@ -62,10 +62,10 @@ data/
 │   ├── GunPoint_TRAIN.ts
 │   └── GunPoint_TRAIN.txt
 └── MNIST/
-    ├── t10k-images.idx3-ubyte
-    ├── t10k-labels.idx1-ubyte
-    ├── train-images.idx3-ubyte
-    └── train-labels.idx1-ubyte
+    ├── t10k-images.idx3-ubyte.gz
+    ├── t10k-labels.idx1-ubyte.gz
+    ├── train-images.idx3-ubyte.gz
+    └── train-labels.idx1-ubyte.gz
 ```
 3. Download the code from this repository
 4. Run `main.m` in MATLAB to:

@@ -1,6 +1,7 @@
 %% Data Preprocessing
 
 % data path
+fprintf('Loading GunPoint...\n');
 data_path = 'data/GunPoint'; 
 train_data_file = fullfile(data_path, 'GunPoint_TRAIN.txt'); 
 test_data_file = fullfile(data_path, 'GunPoint_TEST.txt');
@@ -27,3 +28,9 @@ test_labels(test_labels == 2) = 0;
 
 %% Save processed data
 save(fullfile(data_path, 'data.mat'), 'train_features', 'train_labels', 'test_features', 'test_labels');
+
+%% Display dataset information
+fprintf('Training set size: %d samples\n', size(train_features, 1));
+fprintf('Test set size: %d samples\n', size(test_features, 1));
+fprintf('Number of features per sample: %d\n', size(train_features, 2));
+fprintf('\n');

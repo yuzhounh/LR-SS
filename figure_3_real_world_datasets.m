@@ -4,7 +4,7 @@
 
 % Initialize figure
 % ----------------
-close all;
+% close all;
 figure('Position', [100, 100, 1600, 600]);
 
 % ===================================

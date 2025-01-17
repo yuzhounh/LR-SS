@@ -1,3 +1,6 @@
+% Grid Search for Hyperparameter Optimization
+fprintf('Conducting grid search for delta and epsilon...\n');
+
 % Load the dataset and results
 load('data/SIN_2/data.mat');
 

@@ -1,5 +1,7 @@
 % Signal Classification Script for Multiple Datasets
-clear, clc;
+% clear, clc;
+
+fprintf('Classifying time series datasets using Bayesian optimization...\n');
 
 % List of datasets to process
 datasets = {

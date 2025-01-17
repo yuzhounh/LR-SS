@@ -1,5 +1,5 @@
 % Signal Classification Script for Multiple Datasets
-clear, clc;
+% clear, clc;
 
 % List of datasets to process
 datasets = {

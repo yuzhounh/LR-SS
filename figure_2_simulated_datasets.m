@@ -6,8 +6,8 @@
 % Created on: 2022-3-11
 % Last modified: 2024-11-21
 
-% Clear workspace, command window, and close all figures
-clear, clc, close all;
+% Print status message
+fprintf('Plotting samples for simulated datasets...\n\n');
 
 % Configuration parameters
 % rng(1);                     % Set random seed for reproducibility

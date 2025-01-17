@@ -1,5 +1,5 @@
 % Process and output classification results
-clear, clc, close all;
+% clear, clc, close all;
 
 % Define datasets and methods
 datasets = {'DistalPhalanxOutlineCorrect','GunPoint', 'FashionMNIST', 'MNIST'};
@@ -11,7 +11,7 @@ all_results = cell(length(datasets), 1);
 
 % Define number of repetitions for each dataset
 NUM_REPETITIONS = zeros(length(datasets), 1);
-NUM_REPETITIONS(1:2) = 30;  % First two datasets: 100 repetitions
+NUM_REPETITIONS(1:2) = 30;  % First two datasets: 30 repetitions
 NUM_REPETITIONS(3:4) = 10;   % Last two datasets: 10 repetitions
 
 % Process each dataset

@@ -1,6 +1,10 @@
 % 2022-7-5 13:52:29
+
+% Clear workspace and command window, close all figures
 clear,clc,close all;
 warning('off');
+
+fprintf('Generating smooth matrices...\n');
 
 d=11;
 epsilon=3; % 1, 2, 3, 10, Inf

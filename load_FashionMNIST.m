@@ -1,11 +1,28 @@
-clear, clc;
+% clear, clc;
 
 %%  read data files
-data_path = 'data/FashionMNIST'; 
+fprintf('Loading FashionMNIST...\n');
+data_path = 'data/FashionMNIST';
 train_images_file = 'train-images-idx3-ubyte';
 train_labels_file = 'train-labels-idx1-ubyte';
 test_images_file = 't10k-images-idx3-ubyte';
 test_labels_file = 't10k-labels-idx1-ubyte';
+
+% Decompress .gz files if needed
+files_to_check = {
+    [train_images_file '.gz'], ...
+    [train_labels_file '.gz'], ...
+    [test_images_file '.gz'], ...
+    [test_labels_file '.gz']
+};
+
+for i = 1:length(files_to_check)
+    gz_file = fullfile(data_path, files_to_check{i});
+    out_file = fullfile(data_path, files_to_check{i}(1:end-3)); % Remove .gz
+    if exist(gz_file, 'file') && ~exist(out_file, 'file')
+        gunzip(gz_file, data_path);
+    end
+end
 
 % Function to read MNIST data
 function [images, labels] = readMNIST(image_file, label_file)
@@ -68,3 +85,4 @@ save(fullfile(data_path, 'data.mat'), 'train_features', 'train_labels', 'test_fe
 fprintf('Training set size: %d samples\n', size(train_features, 1));
 fprintf('Test set size: %d samples\n', size(test_features, 1));
 fprintf('Number of features per sample: %d\n', size(train_features, 2));
+fprintf('\n'); 
