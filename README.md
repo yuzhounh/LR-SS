@@ -75,6 +75,9 @@ data/
    - Perform grid search for optimal parameters on simulated data
    - Visualize weight vectors learned by different algorithms
    - Perform Bayesian optimization on both simulated and real datasets
+  
+This repository has been tested on MATLAB R2024a.
+
 
 ![Weight vectors learned by different algorithms](weight_vectors.svg)
   
