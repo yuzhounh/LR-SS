@@ -80,7 +80,9 @@ This repository has been tested on MATLAB R2024a.
 
 Below are the weight vectors learned by different algorithms on the simulated dataset.
 
-![Weight vectors learned by different algorithms](weight_vectors.svg)
+<p align="center">
+  <img src="weight_vectors.png" alt="Weight vectors learned by different algorithms" width="80%">
+</p>
 
   
 ## Contact
