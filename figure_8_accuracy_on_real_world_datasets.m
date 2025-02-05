@@ -70,6 +70,7 @@ save('all_classification_results.mat', 'all_results', 'datasets', 'methods', 'me
 
 % After saving results, create bar plot for accuracy
 % figure('Position', [100 100 1200 600]);
+figure;
 accuracy_means = zeros(length(methods), length(datasets));
 accuracy_stds = zeros(length(methods), length(datasets));
 

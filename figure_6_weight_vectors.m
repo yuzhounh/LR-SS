@@ -1,5 +1,5 @@
 % Load the dataset
-load('../data/SIN_2/data.mat');
+load('data/SIN_2/data.mat');
 
 % Z-score normalization
 [train_features, test_features] = improved_zscore(train_features, test_features);
@@ -83,7 +83,7 @@ end
 fprintf('----------------------------------------\n\n');
 
 % Create a figure with 7x1 subplots
-close all; 
+% close all; 
 figure('Position', [100, 100, 800, 1200]);  % Adjust figure size for better visibility
 
 % Define colors

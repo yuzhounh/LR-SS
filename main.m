@@ -31,6 +31,9 @@ grid_search_2;
 figure_4_accuracy_vs_parameters;
 figure_5_accuracy_vs_parameters;
 
+% Draw weight vectors
+figure_6_weight_vectors; 
+
 %% Experiment 2
 % Test on simulated datasets using Bayesian optimization
 classify_simulated_datasets;
