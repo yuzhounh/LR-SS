@@ -75,15 +75,24 @@ data/
    - Perform grid search for optimal parameters on simulated data
    - Visualize weight vectors learned by different algorithms
    - Perform Bayesian optimization on both simulated and real datasets
-  
-This repository has been tested on MATLAB R2024a.
 
-Below are the weight vectors learned by different algorithms on the simulated dataset.
+![Weight vectors learned by different algorithms](weight_vectors.png)
 
-<p align="center">
-  <img src="weight_vectors.png" alt="Weight vectors learned by different algorithms" width="80%">
-</p>
+## Citation
 
+If you find this code useful in your research, please consider citing our paper:
+```
+@article{wang2025incorporating,
+  title={Incorporating Symmetric Smooth Regularizations into Sparse Logistic Regression for Classification and Feature Extraction},
+  author={Wang, Jing and Xie, Xiao and Wang, Pengwei and Sun, Jian and Liu, Yaochen and Zhang, Li},
+  journal={Symmetry},
+  volume={17},
+  number={2},
+  pages={151},
+  year={2025},
+  publisher={MDPI}
+}
+```
   
 ## Contact
 
