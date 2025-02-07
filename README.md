@@ -76,7 +76,7 @@ data/
    - Visualize weight vectors learned by different algorithms
    - Perform Bayesian optimization on both simulated and real datasets
 
-![Weight vectors learned by different algorithms](weight_vectors.png)
+<img src="weight_vectors.png" alt="Weight vectors learned by different algorithms" width="80%" align="center">
 
 ## Citation
 
