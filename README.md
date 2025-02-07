@@ -76,6 +76,9 @@ data/
    - Visualize weight vectors learned by different algorithms
    - Perform Bayesian optimization on both simulated and real datasets
 
+This repository has been tested on MATLAB R2024a. The figure below illustrates the weight vectors learned by different algorithms.
+
+
 <img src="weight_vectors.png" alt="Weight vectors learned by different algorithms" width="80%" align="center">
 
 ## Citation
