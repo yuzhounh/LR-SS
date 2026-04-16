@@ -1,8 +1,12 @@
 # Logistic Regression with Sparse and Smooth Regularizations
 
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![Journal](https://img.shields.io/badge/Journal-Symmetry-green.svg)](https://www.mdpi.com/journal/symmetry)
 
-This repository contains the implementation of our paper "Incorporating Symmetric Smooth Regularizations into Sparse Logistic Regression for Classification and Feature Extraction".
+> **📄 This repository contains the code for the following paper:**
+>
+> Jing Wang, Xiao Xie, Pengwei Wang, Jian Sun, Yaochen Liu, and Li Zhang. "Incorporating symmetric smooth regularizations into sparse logistic regression for classification and feature extraction." Symmetry 17, no. 2 (2025): 151.
+
 
 ## Overview
 
@@ -79,12 +83,12 @@ data/
 This repository has been tested on MATLAB R2024a. The figure below illustrates the weight vectors learned by different algorithms.
 
 
-<img src="weight_vectors.png" alt="Weight vectors learned by different algorithms" width="80%" align="center">
+<img src="weight_vectors.png" alt="Weight vectors learned by different algorithms" width="70%" align="center">
 
 ## Citation
 
 If you find this code useful in your research, please consider citing our paper:
-```
+```bibtex
 @article{wang2025incorporating,
   title={Incorporating Symmetric Smooth Regularizations into Sparse Logistic Regression for Classification and Feature Extraction},
   author={Wang, Jing and Xie, Xiao and Wang, Pengwei and Sun, Jian and Liu, Yaochen and Zhang, Li},
@@ -93,7 +97,7 @@ If you find this code useful in your research, please consider citing our paper:
   number={2},
   pages={151},
   year={2025},
-  publisher={MDPI}
+  doi={10.3390/sym17020151}
 }
 ```
   
