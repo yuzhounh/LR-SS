@@ -1,6 +1,9 @@
 # Logistic Regression with Sparse and Smooth Regularizations
 
-[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+MATLAB experiments for sparse logistic regression with symmetric smooth regularization.
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-D4AF37?style=flat-square)](LICENSE)
+
 [![Journal](https://img.shields.io/badge/Journal-Symmetry-green.svg)](https://www.mdpi.com/journal/symmetry)
 
 > **📄 This repository contains the code for the following paper:**
@@ -24,7 +27,7 @@ By adjusting the parameters, LR-SS can degenerate into the following algorithms:
 
 2. When $\lambda_1 = 0$, $\lambda_2 \neq 0$ and $\mathbf{Q} = \mathbf{I}$, LR-SS degenerates into logistic regression with L2-norm regularization, denoted as LR-L2.
 
-3. When $\lambda_1 \neq 0$ and $\lg(\lambda_2) = 0$, LR-SS degenerates into logistic regression with L1-norm regularization (standard sparse logistic regression), denoted as LR-L1.
+3. When $\lambda_1 \neq 0$ and $\lambda_2 = 0$, LR-SS degenerates into logistic regression with L1-norm regularization (standard sparse logistic regression), denoted as LR-L1.
 
 4. When $\lambda_1 \neq 0$, $\lambda_2 \neq 0$ and $\mathbf{Q} = \mathbf{I}$, LR-SS degenerates into logistic regression with ElasticNet regularization, denoted as LR-ElasticNet.
 
@@ -34,7 +37,11 @@ By adjusting the parameters, LR-SS can degenerate into the following algorithms:
 
 7. When $\lambda_1 \neq 0$, $\lambda_2 \neq 0$ and $\mathbf{Q} = \mathbf{Q}^{(2)}$, the second form of LR-SS is obtained, denoted as LR-SS2.
 
-## Usage
+## Prerequisites and Execution
+
+The original repository records MATLAB R2024a. The complete workflow uses Statistics and Machine Learning Toolbox (`bayesopt`, `pdist`, `squareform`) and Parallel Computing Toolbox (`UseParallel=true`). Keep the supplied result files if you only need to inspect existing analyses; `main.m` runs data preparation and optimization again.
+
+## Quick Start
 
 1. Download the four real-world datasets:
    - [DistalPhalanxOutlineCorrect](https://www.timeseriesclassification.com/description.php?Dataset=DistalPhalanxOutlineCorrect)
@@ -85,6 +92,13 @@ This repository has been tested on MATLAB R2024a. The figure below illustrates t
 
 <img src="weight_vectors.png" alt="Weight vectors learned by different algorithms" width="70%" align="center">
 
+## Repository Structure
+
+- [main.m](main.m): experiment and figure workflow.
+- [SSLR.m](SSLR.m) and [SSLR_2D.m](SSLR_2D.m): classifiers.
+- `load_*.m` and `split_*.m`: dataset preparation.
+- [pdf/](pdf/) and `accuracy_with_grid_search*.mat`: existing outputs.
+
 ## Citation
 
 If you find this code useful in your research, please consider citing our paper:
@@ -101,6 +115,10 @@ If you find this code useful in your research, please consider citing our paper:
 }
 ```
   
+## License
+
+See the existing [MIT license](LICENSE).
+
 ## Contact
 
-For questions and feedback, please contact: **Jing Wang** (wangjing@xynu.edu.cn). 
+For questions and feedback, please contact: **Jing Wang** (wangjing@xynu.edu.cn).
